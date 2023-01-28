@@ -1,9 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template
+import torch
+from transformers import AutoTokenizer, AutoModel
 
 app = Flask(__name__)
+tokenizer = AutoTokenizer.from_pretrained("facebook/opt-350")
+model = AutoModel.from_pretrained("facebook/opt-350")
 
-@app.route('/')
+
+@app.route("/")
 def index():
-    return 'Web App with Python Flask!'
+    return render_template("index.html")
 
-app.run(host='0.0.0.0', port=81)
+if __name__ == "__main__":
+    app.run()
