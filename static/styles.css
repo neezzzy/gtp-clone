@@ -1,0 +1,158 @@
+:root {
+  --tw-bg-opacity: 20;
+
+}
+
+body {
+  background-color: rgba(52, 53, 65, var(--tw-bg-opacity));
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.container {
+  overflow: hidden;
+  width: 66%;
+  height: 100%;
+  position: relative;
+}
+
+.main-area {
+  display: flex;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+}
+
+main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: width 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: stretch;
+  flex: 1;
+}
+
+
+#chat-section {
+  flex: 1;
+  overflow: hidden;
+}
+
+#chat-messages {
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #444654;
+  color: #fff;
+}
+
+.user-message {
+  background-color: #343541;
+  color: #fff;
+}
+
+
+.form-main-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(32, 33, 36, 0.8), rgba(32, 33, 36, 0));
+}
+
+form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.form-container {
+  display: flex;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+
+}
+
+.form-container:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-input-container {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex: 1;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2px;
+  margin: 5px;
+  flex-grow: 1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.chat-input {
+  margin: 0;
+  width: 100%;
+  resize: none;
+  border: 0;
+  background-color: transparent;
+  padding: 5px;
+  padding-left: 2px;
+  padding-right: 7px;
+  outline: none;
+  box-shadow: none;
+  color: #fff;
+  outline: 0;
+  outline-offset: 0;
+  max-height: 200px;
+  height: 48px;
+  overflow-y: hidden;
+  font-size: 1.6rem;
+  height: 4.2rem;
+}
+
+#send-button {
+  position: absolute;
+  padding: 1rem;
+  text-align: center;
+  bottom: 1.5rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  color: #868e96;
+  border: none;
+  text-align: center;
+  background-color: transparent;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#send-button:hover {
+  cursor: pointer;
+  background-color: #222324f3;
+  border-radius: 50%;
+}
